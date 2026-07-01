@@ -1,5 +1,5 @@
 import './style.css';
-import { translations, companyNames } from './i18n.js';
+import { translations, companyNames, marqueeMarkets } from './i18n.js';
 
 const STORAGE_KEY = 'alen-lang';
 
@@ -25,11 +25,21 @@ function applyTranslations(lang) {
     if (value !== null) el.setAttribute('placeholder', value);
   });
 
+  document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+    const value = getByPath(dict, el.getAttribute('data-i18n-alt'));
+    if (value !== null) el.setAttribute('alt', value);
+  });
+
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     const isActive = btn.getAttribute('data-lang') === lang;
     btn.classList.toggle('is-active', isActive);
     btn.setAttribute('aria-pressed', String(isActive));
   });
+
+  const langToggle = document.querySelector('.lang-toggle');
+  if (langToggle) langToggle.setAttribute('data-active-lang', lang);
+
+  renderMarquee(lang);
 }
 
 function setLang(lang) {
@@ -44,6 +54,17 @@ function initLangToggle() {
 
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
+  });
+}
+
+/* ---------- Marquee ---------- */
+
+function renderMarquee(lang) {
+  const items = marqueeMarkets[lang] || marqueeMarkets.mk;
+  const markup = items.map((item) => `<li>${item}</li>`).join('');
+  ['marquee-list-a', 'marquee-list-b'].forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = markup;
   });
 }
 

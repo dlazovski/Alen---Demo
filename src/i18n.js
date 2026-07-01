@@ -16,6 +16,10 @@ export const translations = {
       trust1: '17+ години искуство',
       trust2: '24 партнерства во 2025',
       trust3: 'Присутни во ЕУ пазарот',
+      photoAlt: 'Фотографија — местодржач за портрет на работник, ќе биде заменета со вистинска фотографија',
+      photoTag: 'Фотографија — местодржач',
+      statCardNumber: '17+',
+      statCardLabel: 'години искуство',
     },
     about: {
       eyebrow: '01 — За нас',
@@ -62,6 +66,8 @@ export const translations = {
           'За тие кои сакаат нешто повеќе: помош, идеи и заедничко вложување за отворање сопствен бизнис во странство.',
       },
       cta: 'Аплицирајте сега',
+      photoAlt: 'Фотографија — местодржач за работно место во хотелиерство/услужни дејности, ќе биде заменета со вистинска фотографија',
+      photoTag: 'Фотографија — местодржач',
     },
     companies: {
       eyebrow: '04 — За компании',
@@ -71,6 +77,8 @@ export const translations = {
       phoneLabel: 'Телефон',
       emailLabel: 'Е-пошта',
       placeholderNote: '[Контакт податоци ќе бидат додадени]',
+      photoAlt: 'Фотографија — местодржач за деловен партнер или објект, ќе биде заменета со вистинска фотографија',
+      photoTag: 'Фотографија — местодржач',
     },
     highlights: {
       stat1Number: '2008',
@@ -154,6 +162,10 @@ export const translations = {
       trust1: '17+ years of experience',
       trust2: '24 partnerships in 2025',
       trust3: 'Present across the EU market',
+      photoAlt: 'Placeholder photo — worker portrait, to be replaced with real photography',
+      photoTag: 'Photo — placeholder',
+      statCardNumber: '17+',
+      statCardLabel: 'years of experience',
     },
     about: {
       eyebrow: '01 — Who we are',
@@ -200,6 +212,8 @@ export const translations = {
           'For those who want more: help, ideas, and joint investment for opening your own business abroad.',
       },
       cta: 'Apply now',
+      photoAlt: 'Placeholder photo — hospitality and service workplace in the EU, to be replaced with real photography',
+      photoTag: 'Photo — placeholder',
     },
     companies: {
       eyebrow: '04 — For companies',
@@ -209,6 +223,8 @@ export const translations = {
       phoneLabel: 'Phone',
       emailLabel: 'Email',
       placeholderNote: '[Contact details to be added]',
+      photoAlt: 'Placeholder photo — partner business or facility, to be replaced with real photography',
+      photoTag: 'Photo — placeholder',
     },
     highlights: {
       stat1Number: '2008',
@@ -282,3 +298,8 @@ export const companyNames = [
   'Kovina-B d.o.o.',
   'Kompanii za vrabotuvanje International d.o.o.',
 ];
+
+export const marqueeMarkets = {
+  mk: ['🇸🇮 Словенија', '🇮🇹 Италија', '🇭🇷 Хрватска', '🇩🇪 Германија', '🇦🇹 Австрија', '🇲🇹 Малта'],
+  en: ['🇸🇮 Slovenia', '🇮🇹 Italy', '🇭🇷 Croatia', '🇩🇪 Germany', '🇦🇹 Austria', '🇲🇹 Malta'],
+};

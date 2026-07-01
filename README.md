@@ -63,11 +63,19 @@ This is a demo for feedback — several things are intentionally stubbed out:
   succeeds if the required fields are filled in. It does **not** send email,
   hit a real API, or persist data anywhere. A real backend/endpoint (or a
   service like Formspree/Netlify Forms) needs to be wired in before launch.
-- **No photography** — the brief explicitly asked for no stock photos of
-  workers and no placeholder logos for the four companies (they don't exist
-  yet). The design is intentionally content-forward and photo-free. If the
-  client wants photography later, hero and "for workers" sections are the
-  natural spots to introduce it.
+- **Photography is placeholder artwork, not real photos.** This build environment
+  has no internet access, so real stock/company photography could not be
+  sourced. Instead, `public/images/hero-placeholder.svg`,
+  `public/images/workers-banner.svg`, and `public/images/companies-banner.svg`
+  are custom-built duotone/gradient graphics in the brand palette, each
+  carrying a visible "Photo — placeholder" tag so it reads as intentional,
+  not broken. **To swap in real photography:** replace the file at each path
+  (keep the same filename, or update the `src` in `index.html`) with a real
+  photo at a similar aspect ratio — hero ≈ 4:4.6 portrait, workers banner ≈
+  16:10 landscape, companies banner ≈ 4:3 — and remove the corresponding
+  `<span class="photo-tag">` element once real photography is in place. No
+  logos are included for the four companies, per the brief (they don't exist
+  yet).
 - **Copy is a first editorial pass**, translated and lightly polished from
   the client's raw material. It has **not** been reviewed by a professional
   Macedonian translator/copyeditor — recommend a native-speaker pass before
@@ -81,7 +89,14 @@ This is a demo for feedback — several things are intentionally stubbed out:
   loaded from Google Fonts.
 - Palette: warm off-white background, deep navy text/sections, muted ochre
   accent — see CSS custom properties at the top of `src/style.css`.
+- Layout takes cues from Deel/Randstad-style corporate marketing sites: an
+  asymmetric hero with an organic "blob"-masked photo panel and a floating
+  stat card, a pill-shaped segmented language switcher, fully rounded (pill)
+  buttons, an infinite-scroll marquee of destination markets, icon-badge
+  cards, and photo banners inside the "for workers" / "for companies"
+  sections — instead of a flat, generic stacked-rectangle layout.
 - Scroll-reveal fade-ins use `IntersectionObserver` and respect
-  `prefers-reduced-motion`.
+  `prefers-reduced-motion`; the marquee animation also pauses under that
+  setting and on hover.
 - No external JS dependencies beyond Vite itself (dev-only) — the shipped
   site is plain HTML/CSS/JS.
