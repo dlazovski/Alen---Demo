@@ -2,7 +2,7 @@
 
 A one-page bilingual (Macedonian / English) marketing site for Alen Services Group,
 built as a client-facing demo. Mobile-first, single scrolling page, working
-language toggle, and a mock application form.
+language toggle, and a call-to-apply phone contact section.
 
 ## Running locally
 
@@ -43,13 +43,14 @@ npm run preview    # serves the production build locally for a final check
 index.html        Page markup (semantic HTML, data-i18n attributes for translated text)
 src/style.css     All styling — mobile-first, with tablet/desktop breakpoints
 src/i18n.js       Macedonian + English copy, keyed by section
-src/main.js       Language toggle, scroll-reveal animations, form handling
+src/main.js       Language toggle, scroll-reveal animations, marquee, company list rendering
 ```
 
-Translated strings live in `index.html` as `data-i18n="section.key"` attributes;
-`src/main.js` swaps `textContent` (and `placeholder` for inputs) by reading the
-matching key out of `src/i18n.js`. No page reload, no external i18n library.
-Language preference is stored in `localStorage` and defaults to Macedonian.
+Translated strings live in `index.html` as `data-i18n="section.key"` attributes
+(and `data-i18n-alt` for image alt text); `src/main.js` swaps `textContent` (or
+the `alt` attribute) by reading the matching key out of `src/i18n.js`. No page
+reload, no external i18n library. Language preference is stored in
+`localStorage` and defaults to Macedonian.
 
 ## What's real vs. placeholder
 
@@ -58,11 +59,10 @@ This is a demo for feedback — several things are intentionally stubbed out:
 - **Contact details** (phone, email, address in Izola) are placeholder text
   wrapped in brackets, e.g. `[Телефонски број]`. Needs real company contact
   info before launch.
-- **Application form submission** is a mock, in-memory handler (see
-  `mockSubmit` in `src/main.js`). It simulates a network request and always
-  succeeds if the required fields are filled in. It does **not** send email,
-  hit a real API, or persist data anywhere. A real backend/endpoint (or a
-  service like Formspree/Netlify Forms) needs to be wired in before launch.
+- **Applying is call-to-apply, not a form.** The "Apply" section shows a
+  phone number placeholder (`[+386 XX XXX XXX]`) instead of a multi-field
+  form — replace the placeholder text and the `href="tel:"` link in
+  `index.html` with the real number once it's available.
 - **Photography is placeholder artwork, not real photos.** This build environment
   has no internet access, so real stock/company photography could not be
   sourced. Instead, `public/images/hero-placeholder.svg`,

@@ -285,7 +285,7 @@
         </div>
       </section>
 
-      <!-- Section 7: Application form -->
+      <!-- Section 7: Apply -->
       <section class="section application" id="apply" aria-labelledby="apply-heading">
         <div class="section__inner reveal">
           <p class="eyebrow" data-i18n="form.eyebrow">05 — Аплицирај</p>
@@ -293,105 +293,18 @@
             Аплицирајте за работа во странство
           </h2>
           <p class="section__subheadline" data-i18n="form.subheadline">
-            Пополнете ги полињата подолу и нашиот тим ќе ве контактира во најкраток можен рок.
+            Јавете се директно на нашиот телефонски број и нашиот тим ќе ве води низ целата постапка.
           </p>
 
-          <form id="application-form" class="app-form" novalidate>
-            <div class="form-row">
-              <label for="fullName" data-i18n="form.fullName">Име и презиме</label>
-              <input type="text" id="fullName" name="fullName" required autocomplete="name" />
-              <p class="field-error" data-error-for="fullName"></p>
+          <div class="phone-cta">
+            <span class="phone-cta__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <div class="phone-cta__details">
+              <span class="phone-cta__label" data-i18n="form.phoneLabel">Телефонски број</span>
+              <a class="phone-cta__number" href="tel:" data-i18n="form.phonePlaceholderDisplay">[+386 XX XXX XXX]</a>
             </div>
-
-            <div class="form-row">
-              <label for="country" data-i18n="form.country">Земја на живеење</label>
-              <select id="country" name="country" required>
-                <option value="" data-i18n="form.countryPlaceholder">Изберете земја</option>
-                <option value="mk" data-i18n="form.countryMK">Северна Македонија</option>
-                <option value="rs" data-i18n="form.countryRS">Србија</option>
-                <option value="ba" data-i18n="form.countryBA">Босна и Херцеговина</option>
-                <option value="al" data-i18n="form.countryAL">Албанија</option>
-                <option value="other" data-i18n="form.countryOther">Друго</option>
-              </select>
-              <p class="field-error" data-error-for="country"></p>
-            </div>
-
-            <div class="form-row">
-              <label for="phone" data-i18n="form.phone">Телефонски број</label>
-              <input type="tel" id="phone" name="phone" required autocomplete="tel" data-i18n-placeholder="form.phonePlaceholder" placeholder="пр. +389 70 123 456" />
-              <p class="field-error" data-error-for="phone"></p>
-            </div>
-
-            <div class="form-row">
-              <label for="email" data-i18n="form.email">Е-пошта</label>
-              <input type="email" id="email" name="email" required autocomplete="email" data-i18n-placeholder="form.emailPlaceholder" placeholder="вие@пример.com" />
-              <p class="field-error" data-error-for="email"></p>
-            </div>
-
-            <div class="form-row">
-              <label for="age" data-i18n="form.age">Возраст</label>
-              <input type="number" id="age" name="age" min="16" max="75" required inputmode="numeric" />
-              <p class="field-error" data-error-for="age"></p>
-            </div>
-
-            <div class="form-row">
-              <label for="trade" data-i18n="form.trade">Занимање или професија</label>
-              <input type="text" id="trade" name="trade" required data-i18n-placeholder="form.tradePlaceholder" placeholder="пр. келнер, електричар, готвач" />
-              <p class="field-error" data-error-for="trade"></p>
-            </div>
-
-            <div class="form-row">
-              <label for="experience" data-i18n="form.experience">Работно искуство</label>
-              <textarea id="experience" name="experience" rows="3" data-i18n-placeholder="form.experiencePlaceholder" placeholder="Кратко опишете го вашето досегашно работно искуство"></textarea>
-            </div>
-
-            <fieldset class="form-row form-fieldset">
-              <legend data-i18n="form.preferredCountries">Посакувани земји за работа</legend>
-              <div class="checkbox-grid">
-                <label class="checkbox-label">
-                  <input type="checkbox" name="preferredCountries" value="slovenia" />
-                  <span data-i18n="form.prefSlovenia">Словенија</span>
-                </label>
-                <label class="checkbox-label">
-                  <input type="checkbox" name="preferredCountries" value="italy" />
-                  <span data-i18n="form.prefItaly">Италија</span>
-                </label>
-                <label class="checkbox-label">
-                  <input type="checkbox" name="preferredCountries" value="croatia" />
-                  <span data-i18n="form.prefCroatia">Хрватска</span>
-                </label>
-                <label class="checkbox-label">
-                  <input type="checkbox" name="preferredCountries" value="germany" />
-                  <span data-i18n="form.prefGermany">Германија</span>
-                </label>
-                <label class="checkbox-label">
-                  <input type="checkbox" name="preferredCountries" value="other" />
-                  <span data-i18n="form.prefOther">Друго</span>
-                </label>
-              </div>
-              <p class="field-error" data-error-for="preferredCountries"></p>
-            </fieldset>
-
-            <div class="form-row">
-              <label for="startDate" data-i18n="form.startDate">Достапност</label>
-              <input type="date" id="startDate" name="startDate" required />
-              <p class="field-error" data-error-for="startDate"></p>
-            </div>
-
-            <div class="form-row">
-              <label for="message">
-                <span data-i18n="form.message">Дополнителна порака</span>
-                <span class="optional-tag" data-i18n="form.messageOptional">(опционално)</span>
-              </label>
-              <textarea id="message" name="message" rows="3" data-i18n-placeholder="form.messagePlaceholder" placeholder="Има ли нешто друго што сакате да го споделите со нас?"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn--primary btn--large btn--full" id="submit-btn">
-              <span data-i18n="form.submit">Испрати апликација</span>
-            </button>
-
-            <div class="form-status" id="form-status" role="status" aria-live="polite" hidden></div>
-          </form>
+          </div>
         </div>
       </section>
     </main>

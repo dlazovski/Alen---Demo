@@ -531,6 +531,10 @@ button {
   transform: translateY(-2px);
 }
 
+.company-name__break {
+  display: block;
+}
+
 /* ---------- Philosophy ---------- */
 .philosophy {
   background: var(--color-cream);
@@ -736,130 +740,58 @@ button {
   font-weight: 500;
 }
 
-/* ---------- Form ---------- */
-.app-form {
-  margin-top: var(--space-md);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  max-width: 640px;
-}
-
-.form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.form-row label,
-.form-fieldset legend {
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: var(--color-navy);
-}
-
-.optional-tag {
-  font-weight: 400;
-  color: var(--color-gray-dark);
-  font-size: 0.85rem;
-}
-
-input,
-select,
-textarea {
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  padding: 0.85rem 1rem;
-  border: 1px solid rgba(15, 30, 61, 0.25);
-  border-radius: var(--radius);
-  background: #fff;
-  color: var(--color-navy);
-  width: 100%;
-  min-height: 48px;
-}
-
-textarea {
-  min-height: 96px;
-  resize: vertical;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 2px solid var(--color-ochre);
-  outline-offset: 1px;
-}
-
-input.has-error,
-select.has-error,
-textarea.has-error {
-  border-color: var(--color-error);
-}
-
-.field-error {
-  color: var(--color-error);
-  font-size: 0.8125rem;
-  min-height: 1rem;
-  margin: 0;
-}
-
-.checkbox-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.checkbox-label {
+/* ---------- Apply / phone CTA ---------- */
+.phone-cta {
+  margin-top: var(--space-lg);
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  font-weight: 400;
-  font-size: 1rem;
-  cursor: pointer;
+  gap: 1.25rem;
+  max-width: 480px;
+  padding: 1.5rem;
+  border: 1px solid rgba(15, 30, 61, 0.14);
+  border-radius: var(--radius-lg);
+  background: rgba(184, 135, 60, 0.05);
 }
 
-.checkbox-label input {
-  width: 20px;
-  height: 20px;
-  min-height: unset;
+.phone-cta__icon {
   flex-shrink: 0;
-  accent-color: var(--color-ochre-dark);
-}
-
-.form-status {
-  margin-top: 0.5rem;
-  padding: 1rem 1.15rem;
-  border-radius: var(--radius);
-  font-size: 0.9375rem;
-}
-
-.form-status.success {
-  background: rgba(184, 135, 60, 0.12);
-  border: 1px solid var(--color-ochre);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-ochre);
   color: var(--color-navy);
 }
 
-.form-status.error {
-  background: rgba(161, 61, 61, 0.08);
-  border: 1px solid var(--color-error);
-  color: var(--color-error);
+.phone-cta__icon svg {
+  width: 26px;
+  height: 26px;
 }
 
-.form-status h3 {
-  font-size: 1.15rem;
-  margin-bottom: 0.35rem;
+.phone-cta__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.phone-cta__label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-gray-dark);
+}
+
+.phone-cta__number {
   font-family: var(--font-serif);
-}
-
-.form-status .btn {
-  margin-top: 0.85rem;
-}
-
-.app-form [hidden] {
-  display: none;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  text-decoration: none;
+  font-style: italic;
 }
 
 /* ---------- Footer ---------- */
