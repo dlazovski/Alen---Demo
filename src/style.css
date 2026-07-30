@@ -623,31 +623,6 @@ button {
 }
 
 /* ---------- Photo banners (shared) ---------- */
-.photo-tag {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 2;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--color-bg);
-  background: rgba(15, 30, 61, 0.55);
-  border: 1px solid rgba(250, 248, 245, 0.35);
-  backdrop-filter: blur(6px);
-  padding: 0.4rem 0.75rem;
-  border-radius: var(--radius-pill);
-}
-
-.photo-tag--caption {
-  position: static;
-  display: inline-block;
-  margin-top: 1rem;
-  color: var(--color-navy);
-  background: rgba(15, 30, 61, 0.06);
-  border-color: rgba(15, 30, 61, 0.14);
-}
-
 .photo-banner {
   position: relative;
   margin: var(--space-lg) 0 0;
@@ -664,12 +639,24 @@ button {
 }
 
 .photo-banner--workers {
-  aspect-ratio: 16 / 10;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 1201 / 2000;
 }
 
 .photo-banner--companies {
   margin-top: var(--space-md);
   aspect-ratio: 4 / 3;
+}
+
+.photo-banner--contain {
+  background: var(--color-navy);
+}
+
+.photo-banner--contain img {
+  object-fit: contain;
+  padding: 1.5rem;
 }
 
 /* ---------- For companies ---------- */

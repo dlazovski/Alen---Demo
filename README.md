@@ -63,19 +63,23 @@ This is a demo for feedback — several things are intentionally stubbed out:
   phone number placeholder (`[+386 XX XXX XXX]`) instead of a multi-field
   form — replace the placeholder text and the `href="tel:"` link in
   `index.html` with the real number once it's available.
-- **Photography is placeholder artwork, not real photos.** This build environment
-  has no internet access, so real stock/company photography could not be
-  sourced. Instead, `public/images/hero-placeholder.svg`,
-  `public/images/workers-banner.svg`, and `public/images/companies-banner.svg`
-  are custom-built duotone/gradient graphics in the brand palette, each
-  carrying a visible "Photo — placeholder" tag so it reads as intentional,
-  not broken. **To swap in real photography:** replace the file at each path
-  (keep the same filename, or update the `src` in `index.html`) with a real
-  photo at a similar aspect ratio — hero ≈ 4:4.6 portrait, workers banner ≈
-  16:10 landscape, companies banner ≈ 4:3 — and remove the corresponding
-  `<span class="photo-tag">` element once real photography is in place. No
-  logos are included for the four companies, per the brief (they don't exist
-  yet).
+- **Photography is client-supplied, not stock.** The hero photo
+  (`public/images/uploads/alen-1.jpg`), the "for workers" banner
+  (`public/images/uploads/alen-2.jpg`), and the "for companies" banner
+  (`public/images/uploads/alen-logo.webp`) were provided directly by the
+  client and used as-is. Note that visually these lean much more staged/promotional
+  than the rest of the site's editorial tone — worth a second look before
+  this goes to the client for final sign-off. The workers-banner frame
+  (`.photo-banner--workers` in `src/style.css`) was narrowed to a portrait
+  aspect ratio (1201:2000) to match `alen-2.jpg`'s native orientation instead
+  of cropping it into the old wide banner shape. The companies-banner logo
+  graphic uses `object-fit: contain` on a navy background
+  (`.photo-banner--contain`) rather than `cover`, since it's a text-bearing
+  graphic, not a croppable photo. To swap any of the three, replace the file
+  under `public/images/uploads/` (or update the `src` in `index.html`) —
+  keep an eye on the frame's `aspect-ratio` in `src/style.css` if the
+  replacement's proportions differ meaningfully. No logos are included for
+  the four companies themselves, per the brief (they don't exist yet).
 - **Copy is a first editorial pass**, translated and lightly polished from
   the client's raw material. It has **not** been reviewed by a professional
   Macedonian translator/copyeditor — recommend a native-speaker pass before
